@@ -6,7 +6,7 @@
 /*   By: fsinged <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 16:30:37 by fsinged           #+#    #+#             */
-/*   Updated: 2019/04/08 16:34:10 by fsinged          ###   ########.fr       */
+/*   Updated: 2019/06/26 14:05:32 by fsinged          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,6 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-	int i;
-
-	i = 0;
-	while (s[i])
-	{
-		ft_putchar_fd(s[i], fd);
-		i++;
-	}
+	if (s)
+		write(fd, s, ft_strlen(s));
 }

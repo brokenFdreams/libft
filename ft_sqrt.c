@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fsinged <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/09 15:26:20 by fsinged           #+#    #+#             */
-/*   Updated: 2019/06/26 16:29:15 by fsinged          ###   ########.fr       */
+/*   Created: 2019/06/26 16:22:58 by fsinged           #+#    #+#             */
+/*   Updated: 2019/06/26 16:24:25 by fsinged          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+int	ft_sqrt(int nbr)
 {
-	if (new)
-	{
-		new->next = *alst;
-		*alst = new;
-	}
+	int i;
+
+	i = 0;
+	while (i * i < nbr)
+		i++;
+	return (i);
 }

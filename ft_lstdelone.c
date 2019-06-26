@@ -6,7 +6,7 @@
 /*   By: fsinged <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 16:48:13 by fsinged           #+#    #+#             */
-/*   Updated: 2019/04/08 16:50:22 by fsinged          ###   ########.fr       */
+/*   Updated: 2019/06/26 16:33:39 by fsinged          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
 {
-	if (alst && del)
+	if (alst && del && *alst)
 	{
 		del((**alst).content, (**alst).content_size);
 		free(*alst);
